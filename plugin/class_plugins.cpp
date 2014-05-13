@@ -53,61 +53,61 @@ extern "C" int PluginCallPublicGM(char *szFunctionName)
 CPlugins::CPlugins()
 {
 #if defined AMX_ALIGN || defined AMX_INIT
-	amxExports[PLUGIN_AMX_EXPORT_Align16] = (void*)&amx_Align16;
-	amxExports[PLUGIN_AMX_EXPORT_Align32] = (void*)&amx_Align32;
+	amxExports[PLUGIN_AMX_EXPORT_Align16] = amx_Align16;
+	amxExports[PLUGIN_AMX_EXPORT_Align32] = amx_Align32;
 #if defined _I64_MAX || defined HAVE_I64
-	amxExports[PLUGIN_AMX_EXPORT_Align64] = (void*)&amx_Align64;
+	amxExports[PLUGIN_AMX_EXPORT_Align64] = amx_Align64;
 #endif
 #endif
-	amxExports[PLUGIN_AMX_EXPORT_Allot] = (void*)&amx_Allot;
-	amxExports[PLUGIN_AMX_EXPORT_Callback] = (void*)&amx_Callback;
-	amxExports[PLUGIN_AMX_EXPORT_Cleanup] = (void*)&amx_Cleanup;
-	amxExports[PLUGIN_AMX_EXPORT_Clone] = (void*)&amx_Clone;
-	amxExports[PLUGIN_AMX_EXPORT_Exec] = (void*)&amx_Exec;
-	amxExports[PLUGIN_AMX_EXPORT_FindNative] = (void*)&amx_FindNative;
-	amxExports[PLUGIN_AMX_EXPORT_FindPublic] = (void*)&amx_FindPublic;
-	amxExports[PLUGIN_AMX_EXPORT_FindPubVar] = (void*)&amx_FindPubVar;
-	amxExports[PLUGIN_AMX_EXPORT_FindTagId] = (void*)&amx_FindTagId;
-	amxExports[PLUGIN_AMX_EXPORT_Flags] = (void*)&amx_Flags;
-	amxExports[PLUGIN_AMX_EXPORT_GetAddr] = (void*)&amx_GetAddr;
-	amxExports[PLUGIN_AMX_EXPORT_GetNative] = (void*)&amx_GetNative;
-	amxExports[PLUGIN_AMX_EXPORT_GetPublic] = (void*)&amx_GetPublic;
-	amxExports[PLUGIN_AMX_EXPORT_GetPubVar] = (void*)&amx_GetPubVar;
-	amxExports[PLUGIN_AMX_EXPORT_GetString] = (void*)&amx_GetString;
-	amxExports[PLUGIN_AMX_EXPORT_GetTag] = (void*)&amx_GetTag;
-	amxExports[PLUGIN_AMX_EXPORT_GetUserData] = (void*)&amx_GetUserData;
-	amxExports[PLUGIN_AMX_EXPORT_Init] = (void*)&amx_Init;
-	amxExports[PLUGIN_AMX_EXPORT_InitJIT] = (void*)&amx_InitJIT;
-	amxExports[PLUGIN_AMX_EXPORT_MemInfo] = (void*)&amx_MemInfo;
-	amxExports[PLUGIN_AMX_EXPORT_NameLength] = (void*)&amx_NameLength;
-	amxExports[PLUGIN_AMX_EXPORT_NativeInfo] = (void*)&amx_NativeInfo;
-	amxExports[PLUGIN_AMX_EXPORT_NumNatives] = (void*)&amx_NumNatives;
-	amxExports[PLUGIN_AMX_EXPORT_NumPublics] = (void*)&amx_NumPublics;
-	amxExports[PLUGIN_AMX_EXPORT_NumPubVars] = (void*)&amx_NumPubVars;
-	amxExports[PLUGIN_AMX_EXPORT_NumTags] = (void*)&amx_NumTags;
-	amxExports[PLUGIN_AMX_EXPORT_Push] = (void*)&amx_Push;
-	amxExports[PLUGIN_AMX_EXPORT_PushArray] = (void*)&amx_PushArray;
-	amxExports[PLUGIN_AMX_EXPORT_PushString] = (void*)&amx_PushString;
-	amxExports[PLUGIN_AMX_EXPORT_RaiseError] = (void*)&amx_RaiseError;
-	amxExports[PLUGIN_AMX_EXPORT_Register] = (void*)&amx_Register;
-	amxExports[PLUGIN_AMX_EXPORT_Release] = (void*)&amx_Release;
-	amxExports[PLUGIN_AMX_EXPORT_SetCallback] = (void*)&amx_SetCallback;
-	amxExports[PLUGIN_AMX_EXPORT_SetDebugHook] = (void*)&amx_SetDebugHook;
-	amxExports[PLUGIN_AMX_EXPORT_SetString] = (void*)&amx_SetString;
-	amxExports[PLUGIN_AMX_EXPORT_SetUserData] = (void*)&amx_SetUserData;
-	amxExports[PLUGIN_AMX_EXPORT_StrLen] = (void*)&amx_StrLen;
+	amxExports[PLUGIN_AMX_EXPORT_Allot] = amx_Allot;
+	amxExports[PLUGIN_AMX_EXPORT_Callback] = amx_Callback;
+	amxExports[PLUGIN_AMX_EXPORT_Cleanup] = amx_Cleanup;
+	amxExports[PLUGIN_AMX_EXPORT_Clone] = amx_Clone;
+	amxExports[PLUGIN_AMX_EXPORT_Exec] = amx_Exec;
+	amxExports[PLUGIN_AMX_EXPORT_FindNative] = amx_FindNative;
+	amxExports[PLUGIN_AMX_EXPORT_FindPublic] = amx_FindPublic;
+	amxExports[PLUGIN_AMX_EXPORT_FindPubVar] = amx_FindPubVar;
+	amxExports[PLUGIN_AMX_EXPORT_FindTagId] = amx_FindTagId;
+	amxExports[PLUGIN_AMX_EXPORT_Flags] = amx_Flags;
+	amxExports[PLUGIN_AMX_EXPORT_GetAddr] = amx_GetAddr;
+	amxExports[PLUGIN_AMX_EXPORT_GetNative] = amx_GetNative;
+	amxExports[PLUGIN_AMX_EXPORT_GetPublic] = amx_GetPublic;
+	amxExports[PLUGIN_AMX_EXPORT_GetPubVar] = amx_GetPubVar;
+	amxExports[PLUGIN_AMX_EXPORT_GetString] = amx_GetString;
+	amxExports[PLUGIN_AMX_EXPORT_GetTag] = amx_GetTag;
+	amxExports[PLUGIN_AMX_EXPORT_GetUserData] = amx_GetUserData;
+	amxExports[PLUGIN_AMX_EXPORT_Init] = amx_Init;
+	amxExports[PLUGIN_AMX_EXPORT_InitJIT] = amx_InitJIT;
+	amxExports[PLUGIN_AMX_EXPORT_MemInfo] = amx_MemInfo;
+	amxExports[PLUGIN_AMX_EXPORT_NameLength] = amx_NameLength;
+	amxExports[PLUGIN_AMX_EXPORT_NativeInfo] = amx_NativeInfo;
+	amxExports[PLUGIN_AMX_EXPORT_NumNatives] = amx_NumNatives;
+	amxExports[PLUGIN_AMX_EXPORT_NumPublics] = amx_NumPublics;
+	amxExports[PLUGIN_AMX_EXPORT_NumPubVars] = amx_NumPubVars;
+	amxExports[PLUGIN_AMX_EXPORT_NumTags] = amx_NumTags;
+	amxExports[PLUGIN_AMX_EXPORT_Push] = amx_Push;
+	amxExports[PLUGIN_AMX_EXPORT_PushArray] = amx_PushArray;
+	amxExports[PLUGIN_AMX_EXPORT_PushString] = amx_PushString;
+	amxExports[PLUGIN_AMX_EXPORT_RaiseError] = amx_RaiseError;
+	amxExports[PLUGIN_AMX_EXPORT_Register] = amx_Register;
+	amxExports[PLUGIN_AMX_EXPORT_Release] = amx_Release;
+	amxExports[PLUGIN_AMX_EXPORT_SetCallback] = amx_SetCallback;
+	amxExports[PLUGIN_AMX_EXPORT_SetDebugHook] = amx_SetDebugHook;
+	amxExports[PLUGIN_AMX_EXPORT_SetString] = amx_SetString;
+	amxExports[PLUGIN_AMX_EXPORT_SetUserData] = amx_SetUserData;
+	amxExports[PLUGIN_AMX_EXPORT_StrLen] = amx_StrLen;
 
-	pPluginData[PLUGIN_DATA_LOGPRINTF] = (void*)&logprintf;
+	pPluginData[PLUGIN_DATA_LOGPRINTF] = logprintf;
 	
 	pPluginData[PLUGIN_DATA_AMX_EXPORTS] = amxExports;
-	pPluginData[PLUGIN_DATA_CALLPUBLIC_FS] = (void*)&PluginCallPublicFS;
-	pPluginData[PLUGIN_DATA_CALLPUBLIC_GM] = (void*)&PluginCallPublicGM;
+	pPluginData[PLUGIN_DATA_CALLPUBLIC_FS] = PluginCallPublicFS;
+	pPluginData[PLUGIN_DATA_CALLPUBLIC_GM] = PluginCallPublicGM;
 
-	pPluginData[PLUGIN_DATA_NETGAME] = (void*)&PluginGetNetGame;
-	pPluginData[PLUGIN_DATA_CONSOLE] = (void*)&PluginGetConsole;
-	pPluginData[PLUGIN_DATA_RAKSERVER] = (void*)&PluginGetRakServer;
-	pPluginData[PLUGIN_DATA_LOADFSCRIPT] = (void*)&PluginLoadFilterScriptFromMemory;
-	pPluginData[PLUGIN_DATA_UNLOADFSCRIPT] = (void*)&PluginUnloadFilterScript;
+	pPluginData[PLUGIN_DATA_NETGAME] = PluginGetNetGame;
+	pPluginData[PLUGIN_DATA_CONSOLE] = PluginGetConsole;
+	pPluginData[PLUGIN_DATA_RAKSERVER] = PluginGetRakServer;
+	pPluginData[PLUGIN_DATA_LOADFSCRIPT] = PluginLoadFilterScriptFromMemory;
+	pPluginData[PLUGIN_DATA_UNLOADFSCRIPT] = PluginUnloadFilterScript;
 }
 
 CPlugins::~CPlugins()
