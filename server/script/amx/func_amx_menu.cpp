@@ -1,9 +1,5 @@
 #include "../../main.h"
 
-#ifndef _STANDALONE
-#include "../../../SDK/amx/amx.h"
-#endif
-
 #include "../func_amx.h"
 #include "func_amx_menu.h"
 

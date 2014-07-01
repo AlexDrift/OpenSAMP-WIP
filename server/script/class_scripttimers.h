@@ -1,11 +1,6 @@
 #ifndef __CSCRIPTTIMERS_H__
 #define __CSCRIPTTIMERS_H__
 
-#ifndef _STANDALONE
-#include "../../SDK/amx/amx.h"
-#include "../../SDK/plugincommon.h"
-#endif
-
 #include <map>
 
 struct timerData

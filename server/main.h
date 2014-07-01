@@ -1,8 +1,6 @@
 #ifndef __MAIN_H_
 #define __MAIN_H_
 
-#define _STANDALONE // comment in for plugin version
-
 // #define _BIG_ENDIAN_SYSTEM // comment out for big endian compatibility
 
 // compiled with unicode modifications
@@ -11,9 +9,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef _STANDALONE 
-	#include <Windows.h> 
-#endif
 #include <time.h>
 #include <malloc.h>
 
@@ -34,8 +29,6 @@ typedef unsigned short	WORD;
 typedef unsigned char	BYTE;
 typedef int				BOOL;
 #endif
-
-#ifdef _STANDALONE
 
 #include "amx/amx.h"
 
@@ -81,10 +74,10 @@ typedef int				BOOL;
 #endif
 
 
-#include "raknet/RakServer.h"
-#include "raknet/RakNetworkFactory.h"
-#include "raknet/PacketEnumerations.h"
-#include "raknet/StringCompressor.h"
+#include <RakServer.h>
+#include <RakNetworkFactory.h>
+#include <PacketEnumerations.h>
+#include <StringCompressor.h>
 
 void logprintf(char* format, ...);
 
@@ -106,20 +99,6 @@ void UnRegisterRPCs(RakServerInterface* pRakServer);
 #define SAFE_RELEASE(p)	{ if (p) { (p)->Release(); (p) = NULL; } }
 #define ARRAY_SIZE(a)	( sizeof((a)) / sizeof(*(a)) )
 
-#endif
-
-#ifndef _STANDALONE
-
-typedef void (*logprintf_t)(char* format, ...);
-extern logprintf_t logprintf;
-
-#endif
-/*
-typedef struct Vector_t
-{
-	float X, Y, Z;
-} tVector;
-*/
 class tVector
 {
 public:
@@ -180,17 +159,8 @@ typedef uint16_t	_VehicleID;
 typedef uint16_t	_Text3DID;
 
 
-#include "raknet/BitStream.h"
-#include "raknet/GetTime.h"
-
-#ifndef _STANDALONE
-
-extern int ( __thiscall* CNetGame__RPC_SendToEveryPlayer )( uint32_t a_NetGame, uint32_t* a_Rpc, RakNet::BitStream* a_BitStream, uint16_t a_Broadcast, uint32_t a_Unknown );
-extern int ( __thiscall* CNetGame__RPC_SendToPlayer )( uint32_t a_NetGame, uint32_t* a_Rpc, RakNet::BitStream* a_BitStream, uint16_t a_Broadcast, uint32_t a_Unknown );
-extern int ( __thiscall* CNetGame__RPC_SendToStreamedPlayer )( uint32_t a_NetGame, uint32_t* a_Rpc, RakNet::BitStream* a_BitStream, uint16_t a_Broadcast, uint32_t a_Unknown );
-extern int ( __thiscall* CNetGame__RPC_SendToPlayerVehicle )( uint32_t a_NetGame, uint32_t* a_Rpc, RakNet::BitStream* a_BitStream, uint16_t a_Broadcast, uint16_t a_Exclude, uint32_t a_Unknown );
-
-#endif
+#include <BitStream.h>
+#include <GetTime.h>
 
 void QuaternionToMatrix( float &quaterW, float &quaterX, float &quaterY, float &quaterZ, tVector* right, tVector* up, tVector* at );
 void QuaternionToMatrix( tQuaternionVector* quaternion, MATRIX4X4* matrix );
@@ -263,14 +233,8 @@ char* GetAnimationNameByIndex( uint32_t index );
 #include "CNetGame.h"
 #include "CConsole.h"
 
-
-
-
-
-
 extern CPickupPool* __PickupPool;
 extern CElementFactory* __ElementFactory;
-
 
 extern CNetGame*	 __NetGame;
 extern CConsole*	 __Console;

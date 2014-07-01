@@ -588,7 +588,6 @@ void CNetGame::InitGameForPlayer(_PlayerID playerId)
 	if(this->bLanMode)
 		bsInitGame.Write(true);
 	else
-		//bsInitGame.Write0();
 		bsInitGame.Write(false);
 
 	bsInitGame.Write(this->deathDropAmount);
@@ -598,6 +597,9 @@ void CNetGame::InitGameForPlayer(_PlayerID playerId)
 	bsInitGame.Write(iNetModeNormalIncarSendRate);
 	bsInitGame.Write(iNetModeFiringSendRate);
 	bsInitGame.Write(iNetModeSendMultiplier);
+
+	int g_lagcompmode = 1;
+	bsInitGame.Write(g_lagcompmode);
 
 	char* szHostName = __Console->GetStringVar("hostname");
 	if(szHostName) 

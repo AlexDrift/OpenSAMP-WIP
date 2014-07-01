@@ -1,11 +1,6 @@
 #include "../main.h"
 #include "../pool/class_pickuppool.h"
 
-#ifndef _STANDALONE
-#include "../../SDK/amx/amx.h"
-#include "../../SDK/plugincommon.h"
-#endif
-
 #include "func_amx.h"
 
 #include "amx/func_amx_element.h"

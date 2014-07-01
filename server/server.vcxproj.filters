@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="script\func_amx.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_pickuppool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_text3dlabels.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_textdrawpool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_textdraw.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_menupool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_menu.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_playerpool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_menu.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_players.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="script\class_fsmanager.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\class_gmmanager.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_vehiclepool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_player_text3dlabels.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_player_var.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="RPC.cpp" />
+    <ClCompile Include="query.cpp" />
+    <ClCompile Include="object\class_vehicle.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="script\format.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\class_scripttimers.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxcons.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxcore.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amx.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxDGram.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxstring.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxfile.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxfloat.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\amxtime.c">
+      <Filter>AMX</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\sqlite\sqlite3.c">
+      <Filter>AMX\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="amx\sqlite\sqlite_amx.c">
+      <Filter>AMX\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="script\core.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="exception_handler.cpp" />
+    <ClCompile Include="script\class_scripthttp.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="script\class_httpclient.cpp">
+      <Filter>script</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\class_plugins.cpp">
+      <Filter>plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_element.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_element.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="factory\class_element_factory.cpp">
+      <Filter>factory</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_referencecounter.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_radaricon.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_radarzone.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_object.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_deprecated_object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_deprecated_objectpool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_deprecated_object.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_deprecated_gangzone.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_object.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="pool\class_deprecated_gangzonepool.cpp">
+      <Filter>pool</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_pickup.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="script\amx\func_amx_pickup.cpp">
+      <Filter>script\amx</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_player.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_color.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinystr.cpp">
+      <Filter>Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxml.cpp">
+      <Filter>Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp">
+      <Filter>Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp">
+      <Filter>Tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="object\class_keybinder.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="CConsole.cpp" />
+    <ClCompile Include="CNetGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="pool">
+      <UniqueIdentifier>{96cfd164-fe00-4fd6-9599-e1759c151612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script">
+      <UniqueIdentifier>{e8c9900a-5783-4052-b8ff-51b20ced6afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="script\amx">
+      <UniqueIdentifier>{07722e63-8a2e-41a8-9f5b-c242795b59af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="object">
+      <UniqueIdentifier>{b24e6fd8-25e8-4920-97f7-d7477d404e45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AMX">
+      <UniqueIdentifier>{cfe8d4aa-57e3-4117-8f4e-f33d62370a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AMX\sqlite">
+      <UniqueIdentifier>{bddf8fe4-8ef3-4c09-a1e5-d4f9fac9c154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="plugin">
+      <UniqueIdentifier>{defe3273-5866-44f2-86a4-e2c012a63856}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="factory">
+      <UniqueIdentifier>{22c80817-9938-403a-95f6-7933d9c55605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tinyxml">
+      <UniqueIdentifier>{8c59c9e5-a4fa-4138-9407-2d3835b67e4c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pool\class_pickuppool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h" />
+    <ClInclude Include="script\func_amx.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_textdrawpool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_text3dlabels.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_textdraw.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_menupool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_menu.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_playerpool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_menu.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_player.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_players.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class_fsmanager.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class_gmmanager.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_vehiclepool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_player_text3dlabels.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_player_var.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="RPC.h" />
+    <ClInclude Include="object\class_vehicle.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="script\format.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class_scripttimers.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="amx\amx.h">
+      <Filter>AMX</Filter>
+    </ClInclude>
+    <ClInclude Include="amx\osdefs.h">
+      <Filter>AMX</Filter>
+    </ClInclude>
+    <ClInclude Include="amx\sqlite\sqlite3.h">
+      <Filter>AMX\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class_scripthttp.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="script\class_httpclient.h">
+      <Filter>script</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\class_plugins.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\plugincommon.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\plugininternal.h">
+      <Filter>plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_element.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_element.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_referencecounter.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="factory\class_element_factory.h">
+      <Filter>factory</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_radaricon.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_radarzone.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_object.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_deprecated_object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_deprecated_objectpool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_deprecated_object.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_deprecated_gangzone.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_object.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="pool\class_deprecated_gangzonepool.h">
+      <Filter>pool</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_pickup.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="script\amx\func_amx_pickup.h">
+      <Filter>script\amx</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_color.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_spawnpoint.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinystr.h">
+      <Filter>Tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml\tinyxml.h">
+      <Filter>Tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="object\class_keybinder.h">
+      <Filter>object</Filter>
+    </ClInclude>
+    <ClInclude Include="CConsole.h" />
+    <ClInclude Include="CNetGame.h" />
+  </ItemGroup>
+</Project>

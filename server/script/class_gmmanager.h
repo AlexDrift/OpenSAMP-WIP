@@ -1,38 +1,30 @@
-#ifndef __CFSMANAGER_H__
-#define __CFSMANAGER_H__
+#ifndef __CGMMANAGER_H__
+#define __CGMMANAGER_H__
 
-#ifndef _STANDALONE
+extern char szGameModeFileName[256];
 
-#include "../../SDK/amx/amx.h"
-#include "../../SDK/plugincommon.h"
-
-#endif
-
-#define MAX_FS 16
-
-class CFilterscriptsManager
+class CGamemodeManager
 {
 #pragma pack(1)
 //private:
 public:
-	AMX* fsAMX[MAX_FS];
-	char fsName[MAX_FS][255];
-	uint32_t fsCount;
-
-	bool LoadFilterScript(char* fsName);
-	bool UnloadFilterScript(char* fsName);
-	void UnloadFilterScripts();
-	void RemoveFilterScript(int fsIdx);
+	AMX gmAMX;
+	bool gmIsInit;
+	bool gmIsSleeping;
+	float gmSleepTime;
 
 public:
-	CFilterscriptsManager();
-	~CFilterscriptsManager();
+	CGamemodeManager();
+	~CGamemodeManager();
 
-	AMX* GetAMX(BYTE id) { if (id >= 0 && id < MAX_FS) return fsAMX[id]; return nullptr; }
+	bool Load(char* gmFile);
+	void Unload();
+	void Frame(float time);
+
+	AMX GetAMX() { return gmAMX; }
+	char* GetFileName() { return &szGameModeFileName[0]; };
 	uint32_t CallPublic( char* functionName );
 
-	uint32_t OnGameModeInit();
-	uint32_t OnGameModeExit();
 	uint32_t OnPlayerConnect(cell playerid);
 	uint32_t OnPlayerDisconnect(cell playerid, cell reason);
 	uint32_t OnPlayerSpawn(cell playerid);
@@ -59,18 +51,18 @@ public:
 	uint32_t OnPlayerSelectedMenuRow(cell playerid, cell row);
 	uint32_t OnVehicleRespray(cell playerid, cell vehicleid, cell color1, cell color2);
 	uint32_t OnVehicleMod(cell playerid, cell vehicleid, cell componentid);
-	uint32_t OnEnterExitModShop(cell playerid, cell enterexit, cell interiorid);
-	uint32_t OnVehiclePaintjob(cell playerid, cell vehicleid, cell paintjobid);
+	uint32_t OnEnterExitModShop(cell playerid, cell enterexit, cell uint32_teriorid);
+	uint32_t OnVehiclePaintjob(cell playerid, cell vehicleid, cell pauint32_tjobid);
 	uint32_t OnPlayerInteriorChange(cell playerid, cell newid, cell oldid);
 	uint32_t OnPlayerKeyStateChange(cell playerid, cell newkeys, cell oldkeys);
-	
+
 	uint32_t OnRconLoginAttempt( unsigned char* szIP, unsigned char* szPassword, cell success );
 	uint32_t OnPlayerUpdate(cell playerid);
 	uint32_t OnPlayerStreamIn(cell playerid, cell forplayerid);
 	uint32_t OnPlayerStreamOut(cell playerid, cell forplayerid);
 	uint32_t OnVehicleStreamIn(cell vehicleid, cell forplayerid);
 	uint32_t OnVehicleStreamOut(cell vehicleid, cell forplayerid);
-	
+
 	uint32_t OnDialogResponse(cell playerid, cell dialogid, cell response, cell listitem, unsigned char *szInputText);
 	uint32_t OnPlayerClickPlayer(cell playerid, cell clickedplayerid, cell source);
 	uint32_t OnVehicleDamageStatusUpdate(cell vehicleid, cell playerid);
