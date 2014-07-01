@@ -732,6 +732,5 @@
     </ClInclude>
     <ClInclude Include="CConsole.h" />
     <ClInclude Include="CNetGame.h" />
-    <ClInclude Include="VersionData.h" />
   </ItemGroup>
 </Project>

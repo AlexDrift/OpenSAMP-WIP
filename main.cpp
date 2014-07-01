@@ -880,7 +880,7 @@ void SignalHandler(int sig, siginfo_t* siginfo, void* uc)
 
 			FILE* fp = fopen("crashinfo.txt", "a");
 			fprintf(fp, "\r\n--------------------------\r\n");
-			fprintf(fp, "SA-MP Server: %s\r\n\r\n", SAMP_VERSION);
+			fprintf(fp, "SA-MP Server: 0.3z\r\n\r\n");
 			fprintf(fp, "Date: %s\r\n\r\n", date);
 			fprintf(fp, "Signal %d (%s)\n", sig, strsignal(sig));
 
@@ -1027,7 +1027,7 @@ int Start()
 	logprintf("");
 	logprintf("SA-MP Dedicated Server");
 	logprintf("----------------------");
-	logprintf("v" SAMP_VERSION ", (C)2005-2012 SA-MP Team\n");
+	logprintf("v0.3z, (C)2005-2012 SA-MP Team\n");
 
 	srand((unsigned int )time(NULL));
 	serverTicket = (uint32_t)rand();
@@ -1105,15 +1105,7 @@ int Start()
 	__Console->ModifyVarFlags("incar_rate", CONSOLE_VARFLAG_READONLY | CONSOLE_VARFLAG_UNREMOVABLE);
 	__Console->ModifyVarFlags("weapon_rate", CONSOLE_VARFLAG_READONLY | CONSOLE_VARFLAG_UNREMOVABLE);
 
-	/*	Open SA:MP	*/
-	char* verStr = new char[strlen(SAMP_VERSION) + 1];
-	strcpy(verStr, SAMP_VERSION);
-	for(uint8_t i=0; i < strlen(SAMP_VERSION); i++)
-		if(verStr[i] == 'O') verStr[i-1] = '\0';
-
-	__Console->AddStringVar("version", CONSOLE_VARFLAG_RULE | CONSOLE_VARFLAG_READONLY | CONSOLE_VARFLAG_UNREMOVABLE, verStr);
-	delete [] verStr;
-	/*				*/
+	__Console->AddStringVar("version", CONSOLE_VARFLAG_RULE | CONSOLE_VARFLAG_READONLY | CONSOLE_VARFLAG_UNREMOVABLE, "0.3z");
 
 #ifdef WIN32
 	SetConsoleCtrlHandler(CtrlHandler, TRUE);

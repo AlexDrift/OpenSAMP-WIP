@@ -52,13 +52,12 @@ void DumpCrashInfo(char * szFileName)
 	fputs("\r\n--------------------------\r\n",f);
 
 	sprintf(szErrorString,
-		"SA-MP Server: %s\r\n\r\n"
+		"SA-MP Server: 0.3z\r\n\r\n"
 		"Exception At Address: 0x%08X\r\n\r\n"
 		"Registers:\r\n"
 		"EAX: 0x%08X\tEBX: 0x%08X\tECX: 0x%08X\tEDX: 0x%08X\r\n"
 		"ESI: 0x%08X\tEDI: 0x%08X\tEBP: 0x%08X\tESP: 0x%08X\r\n"
 		"EFLAGS: 0x%08X\r\n\r\nStack:\r\n",
-		SAMP_VERSION,
 		pContextRecord->Eip,
 		pContextRecord->Eax,
 		pContextRecord->Ebx,

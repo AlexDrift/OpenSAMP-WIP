@@ -77,7 +77,6 @@ unsigned __stdcall UpdateNetworkLoop( LPVOID arguments );
 void* UpdateNetworkLoop( void* arguments );
 #endif
 
-#include "../VersionData.h"
 
 #ifndef _CLIENT_MOD
 void logprintf(char* str, ...);
@@ -984,11 +983,6 @@ Packet* RakPeer::ReceiveIgnoreRPC( void )
 		packet = packetPool.Pop();
 #ifdef _RAKNET_THREADSAFE
 		rakPeerMutexes[packetPool_Mutex].Unlock();
-#endif
-
-#ifndef _CLIENT_MOD
-		if (packet && packet->data)
-			logprintf("packetId: %i", packet->data[0]);
 #endif
 
 		if ( ( packet->length >= sizeof(unsigned char) + sizeof( RakNetTime ) ) &&
@@ -3758,8 +3752,6 @@ void ProcessNetworkPacket( const unsigned int binaryAddress, const unsigned shor
 	}
 #endif
 
-	printf("ProcessNetPacket(0x%X,%u)\n",rakPeer->myPlayerId.binaryAddress,rakPeer->myPlayerId.port);
-    
 	// We didn't check this datagram to see if it came from a connected system or not yet.
 	// Therefore, this datagram must be under 17 bits - otherwise it may be normal network traffic as the min size for a raknet send is 17 bits
 	if ((unsigned char)(data)[0] == (unsigned char) ID_OPEN_CONNECTION_REPLY && length <= sizeof(unsigned char)*2)
@@ -3911,7 +3903,7 @@ void ProcessNetworkPacket( const unsigned int binaryAddress, const unsigned shor
 	// Therefore, this datagram must be under 17 bits - otherwise it may be normal network traffic as the min size for a raknet send is 17 bits
 	else if ((unsigned char)(data)[0] == ID_OPEN_CONNECTION_REQUEST && length == sizeof(unsigned char) + sizeof(short))
 	{
-		if (*((WORD*) &data[1]) != (WORD) ((SocketLayer::Instance()->GetLocalPort(rakPeer->connectionSocket)) ^ RAKNET_PROCCESS_PACKET_KEY))
+		if (*((WORD*) &data[1]) != (WORD) ((SocketLayer::Instance()->GetLocalPort(rakPeer->connectionSocket)) ^ 6969)) //Open SAMP
 		{
 			printf("INVAILD RAKNET_PROCCESS_PACKET_KEY!!");
 			return;
@@ -4811,7 +4803,6 @@ bool RakPeer::RunUpdateCycle( void )
 							delete [] data;
 						}
 					}
-#if NETGAME_VERSION == 8935
 					else if (byteSize > (sizeof(unsigned char) + sizeof(unsigned char)) && (unsigned char)(data)[0] == ID_AUTH_KEY) 
 					{
 							packet=AllocPacket(byteSize, data);
@@ -4820,7 +4811,6 @@ bool RakPeer::RunUpdateCycle( void )
 							packet->playerIndex = ( PlayerIndex ) remoteSystemIndex;
 							AddPacketToProducer(packet);					
 					}
-#endif
 					else
 					{
 						if (data[0]>=(unsigned char)ID_RPC)

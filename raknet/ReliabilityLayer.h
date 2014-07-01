@@ -18,11 +18,7 @@
 #ifndef __RELIABILITY_LAYER_H
 #define __RELIABILITY_LAYER_H
 
-#include "../VersionData.h"
-
-#if NETGAME_VERSION == 8910
-	#define TEA_ENCRYPTOR
-#endif
+//#define TEA_ENCRYPTOR
 
 #include "SocketLayer.h"
 #include "MTUSize.h"

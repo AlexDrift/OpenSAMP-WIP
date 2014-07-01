@@ -86,8 +86,6 @@ typedef int				BOOL;
 #include "raknet/PacketEnumerations.h"
 #include "raknet/StringCompressor.h"
 
-#include "VersionData.h"
-
 void logprintf(char* format, ...);
 
 void RconReply(in_addr clientAddr, SOCKET clientSocket, char* clientData, int clientDataLen, char* reply);
