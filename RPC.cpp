@@ -33,6 +33,8 @@ char* RPC_SelectObject = "\x1B";
 char* RPC_ClickTextDraw = "\x53";
 char* RPC_CheckResponse = "\x67";
 
+//--
+
 char* RPC_SendDeathMessage = "\xFF";
 char* RPC_SetPlayerMapIcon = "\xFF";
 char* RPC_RemoveComponent = "\xFF";
@@ -93,7 +95,7 @@ char* RPC_ShowPlayerNameTagForPlayer = "\xFF";
 
 char* RPC_SetPlayerTime = "\xFF";
 char* RPC_TogglePlayerClock = "\xFF";
-char* RPC_SpawnPlayerForPlayer = "\xFF"; //RPC_WorldPlayerAdd
+char* RPC_SpawnPlayerForPlayer = "\x20"; //RPC_WorldPlayerAdd
 char* RPC_SetPlayerShopName = "\xFF";
 char* RPC_SetSkillLevel = "\xFF";
 char* RPC_SetPlayerDrunkLevel = "\xFF";
@@ -132,8 +134,8 @@ char* RPC_TogglePlayerSpectating = "\xFF";
 char* RPC_SetPlayerSpectatingPlayer = "\xFF";
 char* RPC_SetPlayerSpectatingVehicle = "\xFF";
 
-char* RPC_ConnectionRejected = "\xFF";
-char* RPC_ClientMessage = "\x5D";
+char* RPC_ConnectionRejected = "\x82"; //OK
+char* RPC_ClientMessage = "\x5D"; //OK
 char* RPC_WorldTime = "\xFF";
 
 char* RPC_SetPlayerWantedLevel = "\xFF";
